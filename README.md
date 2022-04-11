@@ -11,3 +11,83 @@
 这是我大一的时候写的，刚起步，写的代码确实烂，大家轻喷。
 附上了当时写的课程设计报告，大家参考用，可以自己改一改。
 
+
+# 1 接口返回格式
+接口返回JSON格式，具体内容为：
+```
+JSON
+  "name" -> 站台名称
+  "info" -> 一个列表，存放所有的设备信息
+    "BBZ_D1" -> 以站台名称+ _ + 设备名称  作为键值
+      {} 设备信息为一个字典  
+    "BBZ_D2"
+      {} 设备信息为一个字典
+```
+设备有信号机、区段、道岔、杂项灯、按钮，每类设备的状态信息字典存放内容不一样，具体为：
+### 信号机
+|字段名称|类型|含义|
+|----|-----|-----|
+|name|str|信号机名称(不包含站场名称)|
+|isGood|bool|是否有效|
+|lampstatus|bool|表示灯状态|
+|approachLock|bool|接近锁闭|
+|countdown|int|倒计时|
+|blockade|bool|是否封锁|
+|alarm1DJ|bool|是否1灯位报警|
+|alarm2DJ|bool|是否2灯位报警|
+
+### 区段
+|字段名称|类型|含义|
+|----|-----|-----|
+|name|str|信号机名称(不包含站场名称)|
+|isGood|bool|是否有效|
+|protectLock|bool|保护锁闭|
+|locked|bool|锁闭|
+|countdown|int|倒计时|
+|blockade|bool|封锁|
+|occupy|bool|占用|
+
+### 道岔
+|字段名称|类型|含义|
+|----|-----|-----|
+|name|str|信号机名称(不包含站场名称)|
+|isGood|bool|是否有效|
+|protectLock|bool|保护锁闭|
+|locked|bool|锁闭|
+|blockade|bool|是否封锁|
+|singleLock|bool|单锁|
+|occupy|bool|占用|
+|position|str|道岔位置|
+
+### 杂项灯
+|字段名称|类型|含义|
+|----|-----|-----|
+|name|str|信号机名称(不包含站场名称)|
+|isGood|bool|是否有效|
+|lampstatus|bool|表示灯状态|
+
+#### 按钮
+|字段名称|类型|含义|
+|----|-----|-----|
+|name|str|信号机名称(不包含站场名称)|
+|isGood|bool|是否有效|
+|lampstatus|bool|表示灯状态|
+|countdown|int|倒计时|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
