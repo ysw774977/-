@@ -29,7 +29,7 @@ JSON
 |----|-----|-----|
 |name|str|信号机名称(不包含站场名称)|
 |isGood|bool|是否有效|
-|lampstatus|bool|表示灯状态|
+|lampstatus|str|U：单黄，UU：双黄，L：绿，LL：双绿，B：白，YB：引导白，LU：绿黄，HS：红闪，LS：绿闪，US：黄闪，USU：黄山黄，BS：白闪，H：红灯，BLUE：蓝灯|
 |approachLock|bool|接近锁闭|
 |countdown|int|倒计时|
 |blockade|bool|是否封锁|
